@@ -78,7 +78,7 @@ function Contact({ lang }) {
   };
 
   return (
-    <section id="contact" className="border-t border-white/5 bg-card/30 py-20 md:py-28">
+    <section id="contact" className="border-t border-border-subtle bg-card/30 py-20 md:py-28">
       <Container>
         <SectionHeader title={contact.title[lang]} />
         <p className="mt-2 text-center text-sm font-medium text-primary">{contact.availability[lang]}</p>
@@ -88,7 +88,7 @@ function Contact({ lang }) {
             ref={formRef}
             onSubmit={handleSubmit}
             noValidate
-            className="flex min-w-0 flex-col gap-5 rounded-2xl border border-white/5 bg-card/60 p-6 backdrop-blur-md sm:p-8"
+            className="flex min-w-0 flex-col gap-5 rounded-2xl border border-border-subtle bg-card/60 p-6 backdrop-blur-md sm:p-8"
           >
             <Field
               label={contactForm.nameLabel[lang]}
@@ -117,7 +117,7 @@ function Contact({ lang }) {
                 name="projectType"
                 value={formData.projectType}
                 onChange={handleChange}
-                className="rounded-xl border border-white/10 bg-background px-4 py-2.5 text-sm text-text focus-visible:border-primary"
+                className="rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-text focus-visible:border-primary"
               >
                 <option value="">{contactForm.selectPlaceholder[lang]}</option>
                 {projectTypeOptions.map((option) => (
@@ -148,7 +148,7 @@ function Contact({ lang }) {
                 onChange={handleChange}
                 aria-invalid={Boolean(errors.message)}
                 aria-describedby={errors.message ? "message-error" : undefined}
-                className="rounded-xl border border-white/10 bg-background px-4 py-2.5 text-sm text-text focus-visible:border-primary"
+                className="rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-text focus-visible:border-primary"
               />
               {errors.message && (
                 <p id="message-error" className="text-xs text-red-400">
@@ -236,7 +236,7 @@ function Field({ label, name, value, onChange, error, type = "text", autoComplet
         placeholder={placeholder}
         aria-invalid={Boolean(error)}
         aria-describedby={error ? `${name}-error` : undefined}
-        className="rounded-xl border border-white/10 bg-card px-4 py-2.5 text-sm text-text focus-visible:border-primary"
+        className="rounded-xl border border-border bg-card px-4 py-2.5 text-sm text-text focus-visible:border-primary"
       />
       {error && (
         <p id={`${name}-error`} className="text-xs text-red-400">

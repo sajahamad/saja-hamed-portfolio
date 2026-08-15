@@ -1,5 +1,5 @@
 const VARIANT_CLASSES = {
-  primary: "bg-primary text-text hover:bg-blue-500",
+  primary: "bg-primary text-on-primary hover:bg-blue-500",
   outline: "border border-muted/40 text-text hover:border-primary hover:text-primary",
 };
 

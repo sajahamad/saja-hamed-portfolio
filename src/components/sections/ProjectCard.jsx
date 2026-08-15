@@ -8,7 +8,7 @@ function ProjectCard({ project, lang, onOpen }) {
     <button
       type="button"
       onClick={onOpen}
-      className="flex flex-col gap-4 rounded-2xl border border-white/5 bg-card/60 p-6 text-left backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-primary"
+      className="flex flex-col gap-4 rounded-2xl border border-border-subtle bg-card/60 p-6 text-left backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-primary"
     >
       <div className="flex items-start justify-between gap-3">
         <h3 className="text-xl font-semibold text-text">{name}</h3>
@@ -23,7 +23,7 @@ function ProjectCard({ project, lang, onOpen }) {
 
       <ul className="flex flex-wrap gap-2">
         {stack.map((tech) => (
-          <li key={tech} className="rounded-full border border-white/10 px-3 py-1 text-xs text-muted">
+          <li key={tech} className="rounded-full border border-border px-3 py-1 text-xs text-muted">
             {tech}
           </li>
         ))}

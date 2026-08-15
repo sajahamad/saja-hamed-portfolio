@@ -21,7 +21,7 @@ function Projects({ lang }) {
   const openProject = projects.find((project) => project.id === openProjectId) ?? null;
 
   return (
-    <section id="work" className="border-t border-white/5 bg-card/30 py-20 md:py-28">
+    <section id="work" className="border-t border-border-subtle bg-card/30 py-20 md:py-28">
       <Reveal>
       <Container>
         <SectionHeader

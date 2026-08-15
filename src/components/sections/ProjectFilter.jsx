@@ -11,8 +11,8 @@ function ProjectFilter({ filters, activeFilter, onSelect, lang }) {
             aria-pressed={isActive}
             className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
               isActive
-                ? "bg-primary text-text"
-                : "border border-white/10 text-muted hover:text-text"
+                ? "bg-primary text-on-primary"
+                : "border border-border text-muted hover:text-text"
             }`}
           >
             {filter.label[lang]}

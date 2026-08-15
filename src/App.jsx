@@ -35,11 +35,8 @@ function App() {
           className="h-full w-full object-cover object-top"
         />
         <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(24,24,27,0.92) 0%, rgba(29,36,53,0.9) 45%, rgba(24,61,70,0.9) 100%)",
-          }}
+          className="absolute inset-0 transition-[background] duration-300"
+          style={{ background: "var(--hero-overlay-gradient)" }}
         />
       </div>
 

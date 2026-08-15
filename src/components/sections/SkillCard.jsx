@@ -48,7 +48,7 @@ function SkillCard({ name, description }) {
   const Icon = ICONS[name] || FiCode;
 
   return (
-    <div className="flex flex-col items-center gap-3 rounded-2xl border border-white/5 bg-card/60 p-5 text-center backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-primary/40">
+    <div className="flex flex-col items-center gap-3 rounded-2xl border border-border-subtle bg-card/60 p-5 text-center backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-primary/40">
       <Icon size={28} className="text-ai" aria-hidden="true" />
       <span className="text-sm font-medium text-text">{name}</span>
       {description && <span className="text-xs text-muted">{description}</span>}

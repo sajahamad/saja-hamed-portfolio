@@ -8,7 +8,7 @@ function About({ lang }) {
   const { about, experience } = portfolioData;
 
   return (
-    <section id="about" className="border-t border-white/5 bg-card/30 py-20 md:py-28">
+    <section id="about" className="border-t border-border-subtle bg-card/30 py-20 md:py-28">
       <Reveal>
       <Container>
         <SectionHeader title={about.title[lang]} />
@@ -17,7 +17,7 @@ function About({ lang }) {
           {about.focusAreas.map((area) => (
             <span
               key={area.en}
-              className="rounded-full border border-white/10 bg-background px-3 py-1 text-xs font-medium text-muted"
+              className="rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-muted"
             >
               {area[lang]}
             </span>

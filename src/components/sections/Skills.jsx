@@ -10,7 +10,7 @@ function Skills({ lang }) {
   const { skills, skillCategories, skillDescriptions, ui } = portfolioData;
 
   return (
-    <section id="skills" className="border-t border-white/5 bg-card/30 py-20 md:py-28">
+    <section id="skills" className="border-t border-border-subtle bg-card/30 py-20 md:py-28">
       <Reveal>
       <Container>
         <SectionHeader title={ui.sectionTitles.skills[lang]} />

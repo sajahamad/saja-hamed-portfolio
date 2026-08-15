@@ -8,7 +8,7 @@ function ContentImpact({ lang }) {
   const { contentImpact, contentSeries } = portfolioData;
 
   return (
-    <section id="impact" className="border-t border-white/5 py-20 md:py-28">
+    <section id="impact" className="border-t border-border-subtle py-20 md:py-28">
       <Reveal>
       <Container>
         <SectionHeader title={contentImpact.title[lang]} subtitle={contentImpact.supportingText[lang]} />
@@ -17,12 +17,12 @@ function ContentImpact({ lang }) {
           {contentImpact.pillars.map((pillar) => (
             <div
               key={pillar.name.en}
-              className="overflow-hidden rounded-2xl border border-white/5 bg-card/60 text-center backdrop-blur-md transition-all duration-200 hover:-translate-y-1"
+              className="overflow-hidden rounded-2xl border border-border-subtle bg-card/60 text-center backdrop-blur-md transition-all duration-200 hover:-translate-y-1"
             >
               <img
                 src={pillar.image}
                 alt={pillar.name[lang]}
-                className="h-48 w-full border-b border-white/10 bg-background/40 object-contain sm:h-56"
+                className="h-48 w-full border-b border-border bg-background/40 object-contain sm:h-56"
                 loading="lazy"
                 onError={(event) => {
                   event.currentTarget.style.display = "none";

@@ -52,7 +52,7 @@ function CaseStudyModal({ project, lang, onClose }) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 24, scale: 0.98 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-white/10 bg-card/90 p-6 backdrop-blur-md sm:p-8"
+            className="max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-border bg-card/90 p-6 backdrop-blur-md sm:p-8"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
@@ -80,7 +80,7 @@ function CaseStudyModal({ project, lang, onClose }) {
 
             <ul className="mt-4 flex flex-wrap gap-2">
               {project.stack.map((tech) => (
-                <li key={tech} className="rounded-full border border-white/10 px-3 py-1 text-xs text-muted">
+                <li key={tech} className="rounded-full border border-border px-3 py-1 text-xs text-muted">
                   {tech}
                 </li>
               ))}
@@ -119,7 +119,7 @@ function CaseStudyModal({ project, lang, onClose }) {
             </div>
 
             {(project.liveDemo || project.github) && (
-              <div className="mt-6 flex flex-wrap gap-3 border-t border-white/5 pt-5">
+              <div className="mt-6 flex flex-wrap gap-3 border-t border-border-subtle pt-5">
                 {project.liveDemo && (
                   <Button as="a" href={project.liveDemo} target="_blank" rel="noreferrer" variant="primary">
                     <FiExternalLink size={16} /> {caseStudyFields.liveDemo[lang]}

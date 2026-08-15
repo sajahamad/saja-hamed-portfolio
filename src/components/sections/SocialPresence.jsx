@@ -21,7 +21,7 @@ function SocialPresence({ lang }) {
   const { socialPresence, socialLinks, ui } = portfolioData;
 
   return (
-    <section id="social" className="border-t border-white/5 bg-card/30 py-20 md:py-28">
+    <section id="social" className="border-t border-border-subtle bg-card/30 py-20 md:py-28">
       <Reveal>
       <Container>
         <SectionHeader title={socialPresence.title[lang]} subtitle={socialPresence.supportingText[lang]} />
@@ -49,7 +49,7 @@ function SocialPresence({ lang }) {
                 href={link.url}
                 target="_blank"
                 rel="noreferrer"
-                className="flex flex-col items-center gap-2 rounded-2xl border border-white/5 bg-card/60 p-6 text-center backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-primary/40"
+                className="flex flex-col items-center gap-2 rounded-2xl border border-border-subtle bg-card/60 p-6 text-center backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-primary/40"
               >
                 {content}
               </a>
@@ -57,7 +57,7 @@ function SocialPresence({ lang }) {
               <div
                 key={platform}
                 aria-disabled="true"
-                className="flex flex-col items-center gap-2 rounded-2xl border border-white/5 bg-card/60 p-6 text-center opacity-60 backdrop-blur-md"
+                className="flex flex-col items-center gap-2 rounded-2xl border border-border-subtle bg-card/60 p-6 text-center opacity-60 backdrop-blur-md"
               >
                 {content}
               </div>

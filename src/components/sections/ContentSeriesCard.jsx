@@ -10,7 +10,7 @@ function ContentSeriesCard({ series, lang }) {
   const titleParts = lang === "ar" ? [titleAr, titleEn] : [titleEn, titleAr];
 
   return (
-    <div className="flex flex-col gap-4 overflow-hidden rounded-2xl border border-white/5 bg-card/60 p-6 backdrop-blur-md transition-all duration-200 hover:-translate-y-1">
+    <div className="flex flex-col gap-4 overflow-hidden rounded-2xl border border-border-subtle bg-card/60 p-6 backdrop-blur-md transition-all duration-200 hover:-translate-y-1">
       <span className="inline-flex w-fit rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
         {badge[lang]}
       </span>
@@ -23,14 +23,14 @@ function ContentSeriesCard({ series, lang }) {
       </div>
 
       {imageError ? (
-        <div className="flex h-40 items-center justify-center rounded-xl border border-dashed border-white/10 bg-background/60 text-xs text-muted">
+        <div className="flex h-40 items-center justify-center rounded-xl border border-dashed border-border bg-background/60 text-xs text-muted">
           {imagePlaceholder[lang]}
         </div>
       ) : (
         <img
           src={image}
           alt={titleParts.filter(Boolean).join(" — ")}
-          className="h-64 w-full rounded-xl border border-white/10 bg-background/40 object-contain"
+          className="h-64 w-full rounded-xl border border-border bg-background/40 object-contain"
           loading="lazy"
           onError={() => setImageError(true)}
         />
@@ -39,7 +39,7 @@ function ContentSeriesCard({ series, lang }) {
       {topics.length > 0 && (
         <ul className="flex flex-wrap gap-2">
           {topics.map((topic) => (
-            <li key={topic.en} className="rounded-full border border-white/10 px-3 py-1 text-xs text-muted">
+            <li key={topic.en} className="rounded-full border border-border px-3 py-1 text-xs text-muted">
               {topic[lang]}
             </li>
           ))}
@@ -57,7 +57,7 @@ function ContentSeriesCard({ series, lang }) {
               href={reelUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-sm font-semibold text-text transition-colors hover:border-primary hover:text-primary"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-border text-sm font-semibold text-text transition-colors hover:border-primary hover:text-primary"
             >
               {index + 1}
             </a>

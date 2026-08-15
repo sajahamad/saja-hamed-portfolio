@@ -13,7 +13,7 @@ function Certifications({ lang }) {
   const openCert = certifications.find((cert) => cert.name === openCertName) ?? null;
 
   return (
-    <section id="certifications" className="border-t border-white/5 bg-card/30 py-20 md:py-28">
+    <section id="certifications" className="border-t border-border-subtle bg-card/30 py-20 md:py-28">
       <Reveal>
       <Container>
         <SectionHeader title={ui.sectionTitles.certifications[lang]} />

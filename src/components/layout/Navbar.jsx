@@ -3,6 +3,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { portfolioData } from "../../data/portfolioData";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
+import ThemeToggle from "../ui/ThemeToggle";
 
 function Navbar({ lang, onToggleLang }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +36,7 @@ function Navbar({ lang, onToggleLang }) {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-white/5"
+          ? "bg-background/80 backdrop-blur-md border-b border-border-subtle"
           : "bg-transparent"
       }`}
     >
@@ -44,7 +45,7 @@ function Navbar({ lang, onToggleLang }) {
           <div className="group relative">
             <div
               tabIndex={0}
-              className="h-8 w-8 overflow-hidden rounded-full border border-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:h-9 md:w-9"
+              className="h-8 w-8 overflow-hidden rounded-full border border-border focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:h-9 md:w-9"
             >
               <img
                 src={personal.avatar}
@@ -57,7 +58,7 @@ function Navbar({ lang, onToggleLang }) {
             </div>
             <span
               role="tooltip"
-              className="pointer-events-none absolute start-0 top-full z-10 mt-2 w-max max-w-[200px] rounded-lg border border-white/10 bg-card/95 px-3 py-1.5 text-xs font-medium text-text opacity-0 shadow-lg backdrop-blur-md transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100"
+              className="pointer-events-none absolute start-0 top-full z-10 mt-2 w-max max-w-[200px] rounded-lg border border-border bg-card/95 px-3 py-1.5 text-xs font-medium text-text opacity-0 shadow-lg backdrop-blur-md transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100"
             >
               {personal.avatarTooltip[lang]}
             </span>
@@ -79,23 +80,27 @@ function Navbar({ lang, onToggleLang }) {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-4 lg:flex">
-          <LangSwitcher lang={lang} onToggleLang={onToggleLang} />
-          <Button as="a" href="#contact" variant="primary">
-            {navCTA[lang]}
-          </Button>
-        </div>
+        <div className="flex items-center gap-3">
+          <div className="hidden items-center gap-4 lg:flex">
+            <LangSwitcher lang={lang} onToggleLang={onToggleLang} />
+            <Button as="a" href="#contact" variant="primary">
+              {navCTA[lang]}
+            </Button>
+          </div>
 
-        <button
-          type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-text lg:hidden"
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-menu"
-          onClick={() => setIsMenuOpen((open) => !open)}
-        >
-          {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-        </button>
+          <ThemeToggle lang={lang} />
+
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-md p-2 text-text lg:hidden"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setIsMenuOpen((open) => !open)}
+          >
+            {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          </button>
+        </div>
       </Container>
 
       <div
@@ -117,7 +122,7 @@ function Navbar({ lang, onToggleLang }) {
               </a>
             ))}
 
-            <div className="mt-3 flex items-center justify-between gap-4 border-t border-white/5 pt-4">
+            <div className="mt-3 flex items-center justify-between gap-4 border-t border-border-subtle pt-4">
               <LangSwitcher lang={lang} onToggleLang={onToggleLang} />
               <Button
                 as="a"

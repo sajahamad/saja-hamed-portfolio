@@ -11,7 +11,7 @@ function CredentialImage({ certification, lang }) {
 
   if (!certification.image || imageError) {
     return (
-      <div className="mt-4 flex h-56 items-center justify-center rounded-xl border border-dashed border-white/10 bg-background/60 text-sm text-muted">
+      <div className="mt-4 flex h-56 items-center justify-center rounded-xl border border-dashed border-border bg-background/60 text-sm text-muted">
         {imagePlaceholder[lang]}
       </div>
     );
@@ -68,7 +68,7 @@ function CredentialModal({ certification, lang, onClose }) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 24, scale: 0.98 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="max-h-[85vh] w-full max-w-xl overflow-y-auto rounded-2xl border border-white/10 bg-card/90 p-6 backdrop-blur-md sm:p-8"
+            className="max-h-[85vh] w-full max-w-xl overflow-y-auto rounded-2xl border border-border bg-card/90 p-6 backdrop-blur-md sm:p-8"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
@@ -97,7 +97,7 @@ function CredentialModal({ certification, lang, onClose }) {
             )}
 
             {certification.credentialUrl && (
-              <div className="mt-6 border-t border-white/5 pt-5">
+              <div className="mt-6 border-t border-border-subtle pt-5">
                 <Button as="a" href={certification.credentialUrl} target="_blank" rel="noreferrer" variant="primary">
                   <FiExternalLink size={16} /> {credentialUi.viewCredential[lang]}
                 </Button>

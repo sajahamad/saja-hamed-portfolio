@@ -10,18 +10,18 @@ function CredentialCard({ certification, lang, onOpen }) {
     <button
       type="button"
       onClick={onOpen}
-      className="flex flex-col gap-3 overflow-hidden rounded-2xl border border-white/5 bg-card/60 p-6 text-left backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-primary/40"
+      className="flex flex-col gap-3 overflow-hidden rounded-2xl border border-border-subtle bg-card/60 p-6 text-left backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-primary/40"
     >
       {image && !imageError ? (
         <img
           src={image}
           alt={name}
-          className="h-44 w-full rounded-xl border border-white/10 bg-background/40 object-contain"
+          className="h-44 w-full rounded-xl border border-border bg-background/40 object-contain"
           loading="lazy"
           onError={() => setImageError(true)}
         />
       ) : (
-        <div className="flex h-44 items-center justify-center rounded-xl border border-dashed border-white/10 bg-background/60 text-xs text-muted">
+        <div className="flex h-44 items-center justify-center rounded-xl border border-dashed border-border bg-background/60 text-xs text-muted">
           {imagePlaceholder[lang]}
         </div>
       )}

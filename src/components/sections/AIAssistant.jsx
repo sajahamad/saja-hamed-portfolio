@@ -63,9 +63,9 @@ function AIAssistant({ lang }) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 16, scale: 0.98 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="flex h-[28rem] w-[90vw] max-w-sm flex-col overflow-hidden rounded-2xl border border-white/10 bg-card/90 shadow-2xl backdrop-blur-md"
+            className="flex h-[28rem] w-[90vw] max-w-sm flex-col overflow-hidden rounded-2xl border border-border bg-card/90 shadow-2xl backdrop-blur-md"
           >
-            <header className="flex items-start justify-between gap-3 border-b border-white/5 px-4 py-3">
+            <header className="flex items-start justify-between gap-3 border-b border-border-subtle px-4 py-3">
               <div>
                 <p className="text-sm font-semibold text-text">{widgetTitle[lang]}</p>
                 <p className="text-xs text-muted">{widgetSubtitle[lang]}</p>
@@ -91,7 +91,7 @@ function AIAssistant({ lang }) {
                       key={item.id}
                       type="button"
                       onClick={() => handleQuickQuestion(item)}
-                      className="rounded-xl border border-white/10 bg-background px-3 py-2 text-left text-sm text-text transition-colors hover:border-primary"
+                      className="rounded-xl border border-border bg-background px-3 py-2 text-left text-sm text-text transition-colors hover:border-primary"
                     >
                       {item.question[lang]}
                     </button>
@@ -104,7 +104,7 @@ function AIAssistant({ lang }) {
                   key={index}
                   className={`max-w-[85%] whitespace-pre-line rounded-xl px-3 py-2 text-sm ${
                     message.role === "user"
-                      ? "ml-auto bg-primary text-text"
+                      ? "ml-auto bg-primary text-on-primary"
                       : "bg-background text-text"
                   }`}
                 >
@@ -114,7 +114,7 @@ function AIAssistant({ lang }) {
               <div ref={messagesEndRef} />
             </div>
 
-            <form onSubmit={handleSubmit} className="flex items-center gap-2 border-t border-white/5 p-3">
+            <form onSubmit={handleSubmit} className="flex items-center gap-2 border-t border-border-subtle p-3">
               <label htmlFor={`${panelId}-input`} className="sr-only">
                 {aiAssistantUi.inputLabel[lang]}
               </label>
@@ -124,12 +124,12 @@ function AIAssistant({ lang }) {
                 value={inputValue}
                 onChange={(event) => setInputValue(event.target.value)}
                 placeholder={placeholder[lang]}
-                className="flex-1 rounded-full border border-white/10 bg-background px-4 py-2 text-sm text-text focus-visible:border-primary"
+                className="flex-1 rounded-full border border-border bg-background px-4 py-2 text-sm text-text focus-visible:border-primary"
               />
               <button
                 type="submit"
                 aria-label={aiAssistantUi.sendLabel[lang]}
-                className="inline-flex items-center justify-center rounded-full bg-primary p-2.5 text-text transition-colors hover:bg-blue-500"
+                className="inline-flex items-center justify-center rounded-full bg-primary p-2.5 text-on-primary transition-colors hover:bg-blue-500"
               >
                 <FiSend size={16} />
               </button>
@@ -143,7 +143,7 @@ function AIAssistant({ lang }) {
         onClick={() => setIsOpen((open) => !open)}
         aria-expanded={isOpen}
         aria-controls={panelId}
-        className="inline-flex items-center gap-2 rounded-full bg-ai px-5 py-3 text-sm font-semibold text-background shadow-lg transition-transform hover:scale-105"
+        className="inline-flex items-center gap-2 rounded-full bg-ai px-5 py-3 text-sm font-semibold text-on-ai shadow-lg transition-transform hover:scale-105"
       >
         <HiSparkles size={18} />
         {buttonLabel[lang]}

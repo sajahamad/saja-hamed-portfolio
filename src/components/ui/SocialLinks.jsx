@@ -24,7 +24,7 @@ function SocialLinks({ className = "" }) {
             target={isExternal ? "_blank" : undefined}
             rel={isExternal ? "noreferrer" : undefined}
             aria-label={name}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-muted transition-colors hover:border-primary hover:text-primary"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-primary hover:text-primary"
           >
             <Icon size={18} />
           </a>

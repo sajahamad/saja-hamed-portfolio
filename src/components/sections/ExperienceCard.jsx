@@ -2,7 +2,7 @@ function ExperienceCard({ experience, lang }) {
   const { role, company, period, responsibilities, certificateImage } = experience;
 
   return (
-    <div className="flex flex-col gap-4 rounded-2xl border border-white/5 bg-card/60 p-6 backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-primary/40">
+    <div className="flex flex-col gap-4 rounded-2xl border border-border-subtle bg-card/60 p-6 backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-primary/40">
       <div>
         <h3 className="text-lg font-semibold text-text">{role[lang]}</h3>
         {company && <p className="text-sm text-primary">{company}</p>}
@@ -21,7 +21,7 @@ function ExperienceCard({ experience, lang }) {
         <img
           src={certificateImage}
           alt={role[lang]}
-          className="mt-auto h-40 w-full rounded-xl border border-white/10 bg-background/40 object-contain"
+          className="mt-auto h-40 w-full rounded-xl border border-border bg-background/40 object-contain"
           loading="lazy"
           onError={(event) => {
             event.currentTarget.style.display = "none";

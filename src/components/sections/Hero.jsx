@@ -4,8 +4,6 @@ import Button from "../ui/Button";
 import SocialLinks from "../ui/SocialLinks";
 import { portfolioData } from "../../data/portfolioData";
 
-const BACKGROUND_HEX = "#18181b";
-
 const FLOATING_POSITIONS = [
   "-top-3 -left-3 sm:-top-4 sm:-left-6 md:-left-8",
   "-top-3 -right-3 sm:-top-4 sm:-right-6 md:-right-8",
@@ -91,7 +89,8 @@ function Hero({ lang }) {
               className="absolute inset-0"
               aria-hidden="true"
               style={{
-                backgroundImage: `linear-gradient(to top, ${BACKGROUND_HEX} 0%, transparent 55%)`,
+                backgroundImage:
+                  "linear-gradient(to top, var(--color-background) 0%, transparent 55%)",
               }}
             />
 
@@ -100,7 +99,8 @@ function Hero({ lang }) {
               className="absolute inset-0"
               aria-hidden="true"
               style={{
-                backgroundImage: `linear-gradient(to right, ${BACKGROUND_HEX} 0%, transparent 18%, transparent 82%, ${BACKGROUND_HEX} 100%)`,
+                backgroundImage:
+                  "linear-gradient(to right, var(--color-background) 0%, transparent 18%, transparent 82%, var(--color-background) 100%)",
               }}
             />
           </div>
@@ -111,7 +111,7 @@ function Hero({ lang }) {
               initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.7 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.35, delay: 0.6 + index * 0.1, ease: "easeOut" }}
-              className={`absolute ${FLOATING_POSITIONS[index % FLOATING_POSITIONS.length]} rounded-full border border-white/10 bg-card/70 px-4 py-2 text-xs font-semibold text-text shadow-lg backdrop-blur-md`}
+              className={`absolute ${FLOATING_POSITIONS[index % FLOATING_POSITIONS.length]} rounded-full border border-border bg-card/70 px-4 py-2 text-xs font-semibold text-text shadow-lg backdrop-blur-md`}
             >
               {badge}
             </motion.span>

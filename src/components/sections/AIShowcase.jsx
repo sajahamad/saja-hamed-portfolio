@@ -22,7 +22,7 @@ function AIShowcase({ lang }) {
   const { aiIntegration } = portfolioData;
 
   return (
-    <section id="ai-integration" className="border-t border-white/5 py-20 md:py-28">
+    <section id="ai-integration" className="border-t border-border-subtle py-20 md:py-28">
       <Reveal>
       <Container>
         <SectionHeader title={aiIntegration.title[lang]} subtitle={aiIntegration.subtitle[lang]} />
@@ -37,7 +37,7 @@ function AIShowcase({ lang }) {
               <div key={step.key} className="flex flex-col items-center gap-3 sm:flex-row">
                 <div
                   className={`flex w-40 flex-col items-center gap-3 rounded-2xl border bg-card/60 p-6 text-center backdrop-blur-md ${
-                    isAiStep ? "border-ai/30" : "border-white/5"
+                    isAiStep ? "border-ai/30" : "border-border-subtle"
                   }`}
                 >
                   <Icon size={28} className={STEP_COLORS[step.key] || "text-text"} aria-hidden="true" />
