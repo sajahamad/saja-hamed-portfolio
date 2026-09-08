@@ -1,5 +1,4 @@
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
 import Button from "../ui/Button";
@@ -16,12 +15,6 @@ const INITIAL_FORM = {
   message: "",
 };
 
-// Set these in .env.local (see .env.example) after creating a free EmailJS account.
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-const isEmailConfigured = Boolean(EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY);
-
 function validate(formData, contactForm) {
   const errors = {};
   if (!formData.name.trim()) errors.name = contactForm.nameRequired;
@@ -37,7 +30,6 @@ function validate(formData, contactForm) {
 function Contact({ lang }) {
   const { contact, services, ui } = portfolioData;
   const { contactForm } = ui;
-  const formRef = useRef(null);
   const [formData, setFormData] = useState(INITIAL_FORM);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle"); // idle | sending | sent | not-configured | error
@@ -59,16 +51,24 @@ function Contact({ lang }) {
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length > 0) return;
 
-    if (!isEmailConfigured) {
-      setStatus("not-configured");
-      return;
-    }
-
     setStatus("sending");
     try {
-      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current, {
-        publicKey: EMAILJS_PUBLIC_KEY,
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
+
+      if (response.status === 503) {
+        setStatus("not-configured");
+        return;
+      }
+
+      if (!response.ok) {
+        setStatus("error");
+        return;
+      }
+
       setSentName(formData.name);
       setStatus("sent");
       setFormData(INITIAL_FORM);
@@ -85,7 +85,6 @@ function Contact({ lang }) {
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.2fr_1fr]">
           <form
-            ref={formRef}
             onSubmit={handleSubmit}
             noValidate
             className="flex min-w-0 flex-col gap-5 rounded-2xl border border-border-subtle bg-card/60 p-6 backdrop-blur-md sm:p-8"
