@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { FiDownload } from "react-icons/fi";
 import Container from "../ui/Container";
+import CVDownload from "../ui/CVDownload";
 import Button from "../ui/Button";
 import SocialLinks from "../ui/SocialLinks";
 import { portfolioData } from "../../data/portfolioData";
@@ -28,7 +28,7 @@ const PORTRAIT_VARIANTS = {
 };
 
 function Hero({ lang }) {
-  const { hero, personal, ui } = portfolioData;
+  const { hero, personal } = portfolioData;
   const shouldReduceMotion = useReducedMotion();
 
   return (
@@ -61,9 +61,10 @@ function Hero({ lang }) {
           <Button as="a" href="#contact" variant="outline">
             {hero.secondaryCTA[lang]}
           </Button>
-          <Button as="a" href={personal.cvUrl} target="_blank" rel="noreferrer" download variant="outline">
-            <FiDownload size={16} /> {ui.downloadCV[lang]}
-          </Button>
+        </motion.div>
+
+        <motion.div variants={ITEM_VARIANTS} className="-mt-2">
+          <CVDownload lang={lang} />
         </motion.div>
 
         <motion.div variants={ITEM_VARIANTS}>

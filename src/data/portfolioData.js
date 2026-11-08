@@ -14,7 +14,7 @@ export const portfolioData = {
       ar: "مطورة واجهات أمامية | بانية مشاريع رقمية | صانعة محتوى | شغوفة بالذكاء الاصطناعي",
     },
     email: "sajahamad285@gmail.com",
-    cvUrl: "/Saja-Hamed-CV.pdf",
+    cv: { pdf: "/Saja-Hamed-CV.pdf", docx: "/Saja-Hamed-CV.docx" },
     portrait: "/saja-photo.jpg",
     avatar: "/saja-avatar.jpg",
     avatarTooltip: { en: "Eng: Saja Hamed Abu Mandeel", ar: "المهندسة سجى حامد ابو منديل" },
@@ -602,6 +602,11 @@ export const portfolioData = {
     startProjectButton: { en: "Start a Project →", ar: "ابدأ مشروعًا ←" },
     featuredProject: { en: "Featured Project", ar: "مشروع مميز" },
     downloadCV: { en: "Download CV", ar: "تحميل السيرة الذاتية" },
+    chooseCvFormat: { en: "Choose CV format", ar: "اختر صيغة السيرة الذاتية" },
+    cvFormats: {
+      pdf: { en: "PDF", ar: "PDF" },
+      docx: { en: "Word (.docx)", ar: "Word (.docx)" },
+    },
     viewCaseStudy: { en: "View Case Study →", ar: "شاهد دراسة الحالة ←" },
     closeCaseStudy: { en: "Close case study", ar: "إغلاق دراسة الحالة" },
     caseStudyFields: {
