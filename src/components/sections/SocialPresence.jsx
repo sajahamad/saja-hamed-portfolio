@@ -1,4 +1,4 @@
-import { SiInstagram, SiTiktok, SiGithub } from "react-icons/si";
+import { SiInstagram, SiGithub } from "react-icons/si";
 import { FiLinkedin, FiAward } from "react-icons/fi";
 import Container from "../ui/Container";
 import Reveal from "../ui/Reveal";
@@ -7,7 +7,6 @@ import { portfolioData } from "../../data/portfolioData";
 
 const ICONS = {
   Instagram: SiInstagram,
-  TikTok: SiTiktok,
   LinkedIn: FiLinkedin,
   GitHub: SiGithub,
   BrightGaza: FiAward,
@@ -26,7 +25,7 @@ function SocialPresence({ lang }) {
       <Container>
         <SectionHeader title={socialPresence.title[lang]} subtitle={socialPresence.supportingText[lang]} />
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {socialPresence.platforms.map((platform) => {
             const Icon = ICONS[platform] || FiAward;
             const link = socialLinks.find((item) => item.name === platform);

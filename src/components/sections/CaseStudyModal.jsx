@@ -54,11 +54,19 @@ function CaseStudyModal({ project, lang, onClose }) {
             transition={{ duration: 0.25, ease: "easeOut" }}
             className="max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-border bg-card/90 p-6 backdrop-blur-md sm:p-8"
           >
+            {project.image && (
+              <img
+                src={project.image}
+                alt={project.name}
+                className="-mx-6 -mt-6 mb-4 h-48 w-[calc(100%+3rem)] max-w-none rounded-t-2xl object-cover sm:-mx-8 sm:-mt-8 sm:w-[calc(100%+4rem)]"
+              />
+            )}
+
             <div className="flex items-start justify-between gap-4">
               <div>
                 {project.featured && (
                   <span className="mb-2 inline-block rounded-full bg-ai/10 px-3 py-1 text-xs font-semibold text-ai">
-                    {portfolioData.ui.featuredCaseStudy[lang]}
+                    {portfolioData.ui.featuredProject[lang]}
                   </span>
                 )}
                 <h2 id={titleId} className="text-2xl font-semibold text-text">
@@ -105,7 +113,7 @@ function CaseStudyModal({ project, lang, onClose }) {
                   <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
                     {caseStudyFields.keyFeatures[lang]}
                   </h3>
-                  <ul className="mt-1 list-disc space-y-1 pl-5 text-text">
+                  <ul className="mt-1 list-disc space-y-1 ps-5 text-text">
                     {caseStudy.keyFeatures[lang].map((feature) => (
                       <li key={feature}>{feature}</li>
                     ))}

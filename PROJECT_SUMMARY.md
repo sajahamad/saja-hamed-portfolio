@@ -93,7 +93,6 @@ portfolio/
 │   │   │   ├── Projects.jsx / ProjectCard.jsx / ProjectFilter.jsx / CaseStudyModal.jsx
 │   │   │   ├── WhySaja.jsx
 │   │   │   ├── Skills.jsx / SkillCard.jsx
-│   │   │   ├── AIShowcase.jsx
 │   │   │   ├── Certifications.jsx / CredentialCard.jsx / CredentialModal.jsx
 │   │   │   ├── Services.jsx
 │   │   │   ├── SocialPresence.jsx

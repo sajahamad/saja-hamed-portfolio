@@ -2,7 +2,8 @@ import { useState } from "react";
 import { portfolioData } from "../../data/portfolioData";
 
 function CredentialCard({ certification, lang, onOpen }) {
-  const { name, issuer, description, image } = certification;
+  const { issuer, description, image } = certification;
+  const name = certification.title?.[lang] ?? certification.name;
   const { imagePlaceholder } = portfolioData.ui;
   const [imageError, setImageError] = useState(false);
 
@@ -10,7 +11,7 @@ function CredentialCard({ certification, lang, onOpen }) {
     <button
       type="button"
       onClick={onOpen}
-      className="flex flex-col gap-3 overflow-hidden rounded-2xl border border-border-subtle bg-card/60 p-6 text-left backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-primary/40"
+      className="flex flex-col gap-3 overflow-hidden rounded-2xl border border-border-subtle bg-card/60 p-6 text-start backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-primary/40"
     >
       {image && !imageError ? (
         <img

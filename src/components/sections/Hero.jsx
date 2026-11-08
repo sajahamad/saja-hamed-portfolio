@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
+import { FiDownload } from "react-icons/fi";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import SocialLinks from "../ui/SocialLinks";
@@ -27,7 +28,7 @@ const PORTRAIT_VARIANTS = {
 };
 
 function Hero({ lang }) {
-  const { hero, personal } = portfolioData;
+  const { hero, personal, ui } = portfolioData;
   const shouldReduceMotion = useReducedMotion();
 
   return (
@@ -40,14 +41,18 @@ function Hero({ lang }) {
       <Container className="relative flex flex-col items-center gap-6 text-center">
         <motion.h1
           variants={ITEM_VARIANTS}
-          className="max-w-5xl text-lg font-semibold leading-snug text-text sm:text-xl lg:text-2xl"
+          className="text-4xl font-bold tracking-tight text-text sm:text-5xl lg:text-6xl"
         >
-          {(hero.supportingText[lang] || hero.supportingText.en).map((line, index) => (
-            <span key={index} className="block">
-              {line}
-            </span>
-          ))}
+          {hero.title[lang]}
         </motion.h1>
+
+        <motion.p variants={ITEM_VARIANTS} className="-mt-2 text-lg font-semibold text-primary sm:text-xl lg:text-2xl">
+          {hero.subtitle[lang]}
+        </motion.p>
+
+        <motion.p variants={ITEM_VARIANTS} className="-mt-2 max-w-3xl text-base text-muted sm:text-lg">
+          {hero.supportingText[lang]}
+        </motion.p>
 
         <motion.div variants={ITEM_VARIANTS} className="flex flex-wrap items-center justify-center gap-4">
           <Button as="a" href="#work" variant="primary">
@@ -55,6 +60,9 @@ function Hero({ lang }) {
           </Button>
           <Button as="a" href="#contact" variant="outline">
             {hero.secondaryCTA[lang]}
+          </Button>
+          <Button as="a" href={personal.cvUrl} target="_blank" rel="noreferrer" download variant="outline">
+            <FiDownload size={16} /> {ui.downloadCV[lang]}
           </Button>
         </motion.div>
 

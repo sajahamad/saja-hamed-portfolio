@@ -20,7 +20,7 @@ function CredentialImage({ certification, lang }) {
   return (
     <img
       src={certification.image}
-      alt={certification.name}
+      alt={certification.title?.[lang] ?? certification.name}
       className="mt-4 w-full rounded-xl object-contain"
       onError={() => setImageError(true)}
     />
@@ -73,7 +73,7 @@ function CredentialModal({ certification, lang, onClose }) {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <h2 id={titleId} className="text-xl font-semibold text-text">
-                  {certification.name}
+                  {certification.title?.[lang] ?? certification.name}
                 </h2>
                 {certification.issuer && (
                   <p className="mt-1 text-sm text-primary">{certification.issuer}</p>

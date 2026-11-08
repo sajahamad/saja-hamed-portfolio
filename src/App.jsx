@@ -7,7 +7,6 @@ import ContentImpact from "./components/sections/ContentImpact";
 import Projects from "./components/sections/Projects";
 import WhySaja from "./components/sections/WhySaja";
 import Skills from "./components/sections/Skills";
-import AIShowcase from "./components/sections/AIShowcase";
 import Certifications from "./components/sections/Certifications";
 import Services from "./components/sections/Services";
 import SocialPresence from "./components/sections/SocialPresence";
@@ -44,12 +43,11 @@ function App() {
       <main className="pt-16 md:pt-20">
         <Hero lang={lang} />
         <About lang={lang} />
+        <Projects lang={lang} />
         <Certifications lang={lang} />
         <ContentImpact lang={lang} />
-        <Projects lang={lang} />
         <WhySaja lang={lang} />
         <Skills lang={lang} />
-        <AIShowcase lang={lang} />
         <Services lang={lang} />
         <SocialPresence lang={lang} />
         <Contact lang={lang} />

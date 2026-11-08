@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiDownload, FiMenu, FiX } from "react-icons/fi";
 import { portfolioData } from "../../data/portfolioData";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
@@ -8,7 +8,7 @@ import ThemeToggle from "../ui/ThemeToggle";
 function Navbar({ lang, onToggleLang }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { nav, navCTA, personal } = portfolioData;
+  const { nav, navCTA, personal, ui } = portfolioData;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 24);
@@ -83,6 +83,9 @@ function Navbar({ lang, onToggleLang }) {
         <div className="flex items-center gap-3">
           <div className="hidden items-center gap-4 lg:flex">
             <LangSwitcher lang={lang} onToggleLang={onToggleLang} />
+            <Button as="a" href={personal.cvUrl} target="_blank" rel="noreferrer" download variant="outline">
+              <FiDownload size={16} /> {ui.downloadCV[lang]}
+            </Button>
             <Button as="a" href="#contact" variant="primary">
               {navCTA[lang]}
             </Button>
@@ -134,6 +137,18 @@ function Navbar({ lang, onToggleLang }) {
                 {navCTA[lang]}
               </Button>
             </div>
+            <Button
+              as="a"
+              href={personal.cvUrl}
+              target="_blank"
+              rel="noreferrer"
+              download
+              variant="outline"
+              onClick={closeMenu}
+              className="mt-2"
+            >
+              <FiDownload size={16} /> {ui.downloadCV[lang]}
+            </Button>
           </Container>
         </div>
       </div>

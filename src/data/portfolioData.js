@@ -13,7 +13,8 @@ export const portfolioData = {
       en: "Front-End Developer | Digital Builder | Content Creator | AI & Automation Enthusiast",
       ar: "مطورة واجهات أمامية | بانية مشاريع رقمية | صانعة محتوى | شغوفة بالذكاء الاصطناعي",
     },
-    email: "marketingsaja279@gmail.com",
+    email: "sajahamad285@gmail.com",
+    cvUrl: "/Saja-Hamed-CV.pdf",
     portrait: "/saja-photo.jpg",
     avatar: "/saja-avatar.jpg",
     avatarTooltip: { en: "Eng: Saja Hamed Abu Mandeel", ar: "المهندسة سجى حامد ابو منديل" },
@@ -33,34 +34,29 @@ export const portfolioData = {
   },
 
   socialLinks: [
-    { name: "Email", url: "mailto:marketingsaja279@gmail.com" },
+    { name: "Email", url: "mailto:sajahamad285@gmail.com" },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/saja-hamad-dev" },
     { name: "GitHub", url: "https://github.com/sajahamad" },
     { name: "Instagram", url: "https://www.instagram.com/saja._hamed" },
-    { name: "TikTok", url: "" }, // placeholder — exact profile URL not yet provided (spec section 23)
     { name: "BrightGaza", url: "https://brightgaza.com/talents/2535" },
   ],
 
   hero: {
-    // Array of lines — rendered one per line in Hero.jsx instead of relying on text-wrap.
+    title: { en: "Saja Hamed", ar: "سجى حامد" },
+    subtitle: {
+      en: "Front-End Developer · React & AI",
+      ar: "مطورة واجهات أمامية · React والذكاء الاصطناعي",
+    },
     supportingText: {
-      en: [
-        "I'm Saja Hamed — a Computer Systems Engineer and Front-End Developer",
-        "crafting interactive React experiences, building innovative projects with AI,",
-        "and creating inspiring content that empowers and motivates others.",
-      ],
-      ar: [
-        "أنا سجى حامد — مهندسة نظم حاسوب ومطورة واجهات أمامية،",
-        "أصمم تجارب تفاعلية بـ React، وأبني مشاريع مبتكرة بالذكاء الاصطناعي،",
-        "وأصنع محتوى ملهمًا يمكّن الآخرين ويحفزهم.",
-      ],
+      en: "I build interactive web experiences and create content that helps students start right.",
+      ar: "أبني تجارب ويب تفاعلية، وأصنع محتوى يساعد الطلاب على البداية الصحيحة.",
     },
     primaryCTA: { en: "View My Work →", ar: "شاهدي أعمالي ←" },
     secondaryCTA: { en: "Let's Work Together", ar: "لنعمل معًا" },
     floatingBadges: ["React", "JavaScript", "AI", "Automation"],
     status: {
-      en: "Currently building: Rentora & Full-Stack AI Workflows",
-      ar: "أعمل حاليًا على: Rentora وسير عمل متكامل بالذكاء الاصطناعي",
+      en: "Currently building: Rentora & AI-powered Front-End experiences",
+      ar: "أعمل حاليًا على: Rentora وتجارب واجهات أمامية مدعومة بالذكاء الاصطناعي",
     },
   },
 
@@ -79,13 +75,14 @@ export const portfolioData = {
   experience: [
     {
       role: { en: "Front-End & Digital Projects Specialist", ar: "أخصائية واجهات أمامية ومشاريع رقمية" },
-      company: "Zero To Hero",
+      company: "Zero to Hero",
       period: { en: "2024 – Present", ar: "2024 – حتى الآن" },
       responsibilities: [
         { en: "Managing web platforms", ar: "إدارة المنصات الإلكترونية" },
         { en: "Front-End development", ar: "تطوير الواجهات الأمامية" },
         { en: "React projects", ar: "مشاريع React" },
         { en: "Digital project coordination", ar: "تنسيق المشاريع الرقمية" },
+        { en: "Started with a 120-hour Front-End internship.", ar: "بدأت بتدريب في الواجهات الأمامية مدته 120 ساعة." },
       ],
       // Note: file on disk is "zero-to-hero-internship.png" (renamed from "zerotoherocertificate.png" for URL safety).
       certificateImage: "/certificates/zero-to-hero-internship.png",
@@ -229,6 +226,10 @@ export const portfolioData = {
         en: "All-in-one rental marketplace platform for properties, equipment, and services.",
         ar: "منصة سوق تأجير شاملة للعقارات والمعدات والخدمات.",
       },
+      nextStep: {
+        en: "Next step: exploring AI-powered search and recommendations.",
+        ar: "الخطوة التالية: استكشاف البحث والتوصيات المدعومة بالذكاء الاصطناعي.",
+      },
       stack: ["React", "JavaScript", "REST APIs", "Tailwind CSS"],
       categories: ["Web Development", "React"],
       caseStudy: {
@@ -240,6 +241,37 @@ export const portfolioData = {
       },
       liveDemo: "", // placeholder — URL not yet provided
       github: "", // placeholder — URL not yet provided
+    },
+    {
+      id: "start-it-right",
+      name: "Start It Right — ابدأها صح",
+      featured: true,
+      // Note: file on disk was "ابداها صح.png" (renamed to "ibdaha-sah.png" for URL safety).
+      image: "/projects/ibdaha-sah.png",
+      description: {
+        en: "A platform that helps Palestinian high-school graduates compare university majors using clear, accurate admission data.",
+        ar: "منصة تساعد طلاب التوجيهي في فلسطين على مقارنة التخصصات الجامعية ببيانات قبول واضحة ودقيقة.",
+      },
+      stack: ["React 19", "Vite", "Tailwind CSS", "React Router"],
+      categories: ["Web Development", "React"],
+      caseStudy: {
+        problem: {
+          en: "High school graduates in Gaza often choose a university major without access to reliable admission data or guidance.",
+          ar: "غالبًا ما يختار خريجو التوجيهي في غزة تخصصهم الجامعي بدون بيانات قبول موثوقة أو إرشاد كافٍ.",
+        },
+        myRole: { en: "", ar: "" },
+        solution: {
+          en: "Built a platform that centralizes real admission data from 4 Gaza universities, lets students compare majors side by side, and provides a first-year survival guide.",
+          ar: "بنيت منصة تجمع معدلات قبول حقيقية من 4 جامعات في غزة، وتتيح للطلاب مقارنة التخصصات جنبًا إلى جنب، وتوفر دليلًا للسنة الجامعية الأولى.",
+        },
+        architecture: { en: "", ar: "" },
+        keyFeatures: {
+          en: ["Real admission data from 4 Gaza universities", "Major comparison tool", "First-year survival guide"],
+          ar: ["معدلات قبول حقيقية من 4 جامعات بغزة", "أداة مقارنة بين التخصصات", "دليل للسنة الجامعية الأولى"],
+        },
+      },
+      liveDemo: "https://start-it-right1.vercel.app/",
+      github: "https://github.com/sajahamad/start-it-right",
     },
     {
       id: "gaza-voice",
@@ -315,19 +347,15 @@ export const portfolioData = {
     title: { en: "About Me", ar: "لماذا سجى؟" },
     narrative: {
       ar: [
-        "أنا سجى، وبشوف حالي كشخص ما بحب يوقف عند مكان واحد. بدأت رحلتي من شغفي بالـ Front-End Development، وتعلمت كيف أحوّل الأفكار لتجارب ومواقع حقيقية، ومع كل مشروع بشتغل عليه بكتشف إني بحب التحدي، التجربة، والتعلم أكثر.",
-        "وبنفس الوقت، بدأت أتوسع أكثر في عالم الذكاء الاصطناعي والـAI، لأنه بالنسبة إلي مش مجرد ترند، بل أداة ممكن تغيّر طريقة شغلنا وتخلينا نبني حلول أذكى وأسرع.",
-        "وبجانب البرمجة، عندي مساحة ثانية قريبة كثير لقلبي: صناعة المحتوى. بحب أحكي، أشارك، وأوصل أفكار ممكن تعطي شخص دفعة صغيرة يكمل فيها طريقه. ومن أكثر الأشياء اللي بفتخر فيها إني بحاول أكون سبب في مساعدة غيري، خصوصًا الطلاب. بحب أشارك تجربتي، أساعدهم يفهموا تخصصاتهم، يخططوا لطريقهم، ويؤمنوا إنهم قادرين يوصلوا حتى لو البداية كانت صعبة أو الطريق مش واضح.",
-        "أنا ما بعتبر حالي وصلت. أنا لسه بتعلم، لسه بجرب، ولسه ببني. لكن الشي اللي بعرفه أكيد إن رحلتي مش بس عن الكود والمشاريع؛ هي عن التطور، التجربة، صناعة الأثر، ومساعدة غيري يصدقوا إنهم قادرين يعملوا أكثر مما بتخيلوا. أنا سجى، وبحب أتعلم، أبني، أشارك، وأترك أثر.",
+        "أنا طالبة هندسة نظم حاسوب ومطورة واجهات أمامية، بحب أتعلم وأبني منتجات حقيقية.",
+        "ببني الواجهات باستخدام React، وبستخدم أدوات الذكاء الاصطناعي لأسرّع وأحسّن طريقة شغلي.",
+        "من خلال \"ابدأها صح\" دعمت أكثر من 30,000 طالب، وبؤمن إن الأحلام بتتحقق بالفعل.",
+        "أنا سجى.",
       ],
       en: [
-        "I'm Saja, someone who never wants to stay in one place. I'm driven by curiosity, growth, and the desire to keep learning, experimenting, and discovering what I'm capable of building.",
-        "My journey started with a passion for Front-End Development, where I learned how to turn ideas into real, interactive experiences and websites. With every project I work on, I discover more about my love for challenges, experimentation, problem-solving, and continuous learning.",
-        "As I grew in the world of technology, I started exploring Artificial Intelligence (AI) more deeply. To me, AI is not just a trend or a new technology — it's a powerful tool that can change the way we work and help us create smarter, faster, and more meaningful solutions. That's why I'm constantly exploring ways to combine development and AI to build things that can make a real difference.",
-        "Beyond technology and coding, I have another space that is very close to my heart: Content Creation. I love talking, sharing experiences, and turning ideas into content that might reach someone at exactly the moment they need it. One of the things I'm most proud of is being able to inspire and support 30,000+ people, especially students and young people, by helping them set goals, better understand their fields of study, think more clearly about their future, and keep moving forward even when the beginning is difficult or the path isn't clear.",
-        "I believe that dreams don't come true by waiting. They come true through action, persistence, experimentation, and the courage to keep going. I also believe that sometimes, having someone who believes in you and encourages you at the right moment can make a real difference.",
-        "I don't see myself as someone who has already arrived. I'm still learning, still experimenting, and still building. Every new stage is an opportunity to discover something new about myself, my skills, and the world around me.",
-        "My journey isn't just about code and projects. It's about growth, experimentation, creating impact, and helping others believe they are capable of achieving more than they imagine.",
+        "I'm a Computer Systems Engineering student and Front-End Developer who loves learning and building real products.",
+        "I build interfaces with React and use AI tools to speed up and improve how I work.",
+        "Through \"ابدأها صح\" I've supported 30,000+ students, and I believe dreams come true through action.",
         "I'm Saja.",
       ],
     },
@@ -364,31 +392,25 @@ export const portfolioData = {
     designProduct: { en: "Design & Product", ar: "التصميم والمنتج" },
   },
 
-  aiIntegration: {
-    title: { en: "Building Smarter Web Experiences with AI", ar: "بناء تجارب ويب أذكى بالذكاء الاصطناعي" },
-    subtitle: {
-      en: "Combining Front-End Development and AI to create interactive products and intelligent digital experiences.",
-      ar: "دمج تطوير الواجهات الأمامية مع الذكاء الاصطناعي لإنشاء منتجات تفاعلية وتجارب رقمية ذكية.",
-    },
-    workflow: [
-      { key: "userInput", label: { en: "User Input", ar: "إدخال المستخدم" } },
-      { key: "aiLogic", label: { en: "AI Logic", ar: "منطق الذكاء الاصطناعي" } },
-      { key: "appLogic", label: { en: "Application Logic", ar: "منطق التطبيق" } },
-      { key: "result", label: { en: "Result", ar: "النتيجة" } },
-    ],
-    disclaimer: {
-      en: "A conceptual workflow exploring how AI could enhance the Rentora experience. AI integration is not yet connected.",
-      ar: "سير عمل مفاهيمي يستكشف كيف يمكن للذكاء الاصطناعي تعزيز تجربة Rentora. لم يتم ربط تكامل الذكاء الاصطناعي بعد.",
-    },
-  },
-
   certifications: [
+    {
+      name: "CodeMap 2026 Training Program",
+      // Optional bilingual display title — "name" stays the stable identifier.
+      title: { en: "CodeMap 2026 Training Program", ar: "برنامج CodeMap 2026 التدريبي" },
+      issuer: "TAQAT",
+      description: {
+        en: "An intensive 144-hour program in software architecture, code organization, and development workflow. I served as Team Leader and Frontend Developer (React).",
+        ar: "برنامج تدريبي مكثّف (144 ساعة) في تصميم البنية البرمجية وتنظيم الكود وتحسين سير العمل. شغلت فيه دور قائدة الفريق ومطوّرة الواجهات الأمامية باستخدام React.",
+      },
+      image: "/certificates/taqat-codemap-2026.png",
+      credentialUrl: "https://taqat.academy/verify/TQ-2026-00787", // Certificate ID: TQ-2026-00787 — completed 2 November 2026
+    },
     {
       name: "AI Fluency: Framework & Foundations",
       issuer: "Anthropic / UCC / Ringling College",
       description: {
-        en: "A foundational certificate in the concept of \"AI Fluency,\" issued by Anthropic in partnership with University College Cork and Ringling College of Art + Design, with support from Ireland's National Forum for the Enhancement of Teaching and Learning in Higher Education. It covers the core frameworks for using AI tools effectively and responsibly. It focused on understanding the capabilities and limits of AI models and integrating them thoughtfully into a workflow. An important starting point for a deeper understanding of modern AI tools.",
-        ar: "شهادة تأسيسية في مفهوم \"الطلاقة بالذكاء الاصطناعي\"، صادرة عن Anthropic بالشراكة مع University College Cork وRingling College of Art + Design، وبدعم من الهيئة الوطنية لتطوير التعليم العالي بأيرلندا. تغطي الأطر الأساسية للتعامل الفعّال والمسؤول مع أدوات الذكاء الاصطناعي. ركّزت على فهم قدرات النماذج الذكية وحدودها ودمجها بسير العمل بطريقة مدروسة. نقطة انطلاق مهمة لفهم عميق لأدوات الذكاء الاصطناعي الحديثة.",
+        en: "A foundational certificate on using AI tools effectively and responsibly, including their capabilities, limits and place in a workflow.",
+        ar: "شهادة تأسيسية في استخدام أدوات الذكاء الاصطناعي بفعالية ومسؤولية، وفهم قدراتها وحدودها ودمجها في سير العمل.",
       },
       image: "/certificates/ai-fluency.png",
       credentialUrl: "", // placeholder — no credential link provided
@@ -397,8 +419,8 @@ export const portfolioData = {
       name: "Claude Code 101",
       issuer: "Anthropic",
       description: {
-        en: "An introductory course from Anthropic on Claude Code, an AI-powered coding tool. It covers how to use the tool to write, edit, and understand code within real projects. Through it, I learned the basics of working with an intelligent coding assistant inside the development environment. Part of my journey integrating AI tools into my workflow.",
-        ar: "دورة تعريفية من Anthropic حول Claude Code، أداة البرمجة العاملة بالذكاء الاصطناعي. تغطي آليات استخدام الأداة للكتابة والتعديل وفهم الكود ضمن مشاريع حقيقية. تعرّفت خلالها على أساسيات التعامل مع مساعد برمجي ذكي داخل بيئة التطوير. جزء من رحلتي بدمج أدوات الذكاء الاصطناعي بسير عملي.",
+        en: "An introductory course on Claude Code, an AI-powered coding tool, covering how to write, edit and understand code within real projects.",
+        ar: "دورة تعريفية حول Claude Code، أداة البرمجة العاملة بالذكاء الاصطناعي، تغطي كتابة الكود وتعديله وفهمه ضمن مشاريع حقيقية.",
       },
       image: "/certificates/claude-code-101.png",
       credentialUrl: "",
@@ -406,7 +428,10 @@ export const portfolioData = {
     {
       name: "Front-End Development Internship (120 Hours)",
       issuer: "Zero to Hero",
-      description: { en: "", ar: "" },
+      description: {
+        en: "A 120-hour hands-on internship building responsive interfaces with HTML, CSS, JavaScript and React on real projects.",
+        ar: "تدريب عملي مدته 120 ساعة في بناء واجهات متجاوبة باستخدام HTML وCSS وJavaScript وReact ضمن مشاريع حقيقية.",
+      },
       image: "/certificates/zero-to-hero-internship.png",
       credentialUrl: "",
     },
@@ -414,8 +439,8 @@ export const portfolioData = {
       name: "Front-End Development Internship",
       issuer: "WebUra Company",
       description: {
-        en: "A hands-on Front-End Development internship at WebUra Company, from April 5 to June 28, 2026. I worked on a variety of tasks related to building user interfaces within a real work environment, showing strong commitment and discipline, and contributing to several projects in a collaborative spirit. The internship strengthened my skills in clean code, responsive design, and teamwork.",
-        ar: "تدريب عملي بمجال Front-End Development في شركة WebUra، من 5 أبريل إلى 28 يونيو 2026. عملت على مهام متنوعة مرتبطة بتطوير واجهات المستخدم ضمن بيئة عمل حقيقية. أظهرت التزامًا وانضباطًا عاليًا، وساهمت بإنجاز عدة مشاريع بروح تعاونية. عزز التدريب مهاراتي بالكود النظيف والتصميم المتجاوب والعمل الجماعي.",
+        en: "A hands-on internship (April–June 2026) building user interfaces, strengthening my clean code, responsive design and teamwork skills.",
+        ar: "تدريب عملي (أبريل – يونيو 2026) في بناء واجهات المستخدم، عزز مهاراتي بالكود النظيف والتصميم المتجاوب والعمل الجماعي.",
       },
       image: "/certificates/webura-internship.png",
       credentialUrl: "",
@@ -423,7 +448,10 @@ export const portfolioData = {
     {
       name: "Claude with the Anthropic API",
       issuer: "Anthropic",
-      description: { en: "", ar: "" }, // placeholder — description text not provided yet
+      description: {
+        en: "A course on building applications with Claude through the Anthropic API, covering prompting, tool use and integration.",
+        ar: "دورة في بناء التطبيقات باستخدام Claude عبر Anthropic API، تغطي كتابة الأوامر واستخدام الأدوات والتكامل.",
+      },
       image: "/certificates/claude-anthropic-api.png",
       credentialUrl: "",
     },
@@ -470,7 +498,7 @@ export const portfolioData = {
       en: "Building digital products, sharing knowledge, creating meaningful content, and helping others turn their ideas into possibilities.",
       ar: "أبني منتجات رقمية، أشارك المعرفة، أصنع محتوى ذا معنى، وأساعد الآخرين على تحويل أفكارهم إلى إمكانيات حقيقية.",
     },
-    platforms: ["Instagram", "TikTok", "LinkedIn", "GitHub", "BrightGaza"],
+    platforms: ["Instagram", "LinkedIn", "GitHub", "BrightGaza"],
   },
 
   contact: {
@@ -480,7 +508,7 @@ export const portfolioData = {
       ar: "● متاحة لفرص وتعاونات مختارة",
     },
     formFields: ["Name", "Email", "Project Type", "Scope / Budget", "Message"],
-    email: "marketingsaja279@gmail.com",
+    email: "sajahamad285@gmail.com",
   },
 
   aiAssistant: {
@@ -492,8 +520,8 @@ export const portfolioData = {
     },
     placeholder: { en: "Type a question...", ar: "اكتب سؤالك..." },
     fallbackAnswer: {
-      en: "I don't have a predefined answer for that yet. For anything else, reach out directly at marketingsaja279@gmail.com.",
-      ar: "لا تتوفر إجابة جاهزة لهذا السؤال حاليًا. لأي استفسار آخر، تواصل مباشرة عبر marketingsaja279@gmail.com.",
+      en: "I don't have a predefined answer for that yet. For anything else, reach out directly at sajahamad285@gmail.com.",
+      ar: "لا تتوفر إجابة جاهزة لهذا السؤال حاليًا. لأي استفسار آخر، تواصل مباشرة عبر sajahamad285@gmail.com.",
     },
     quickQuestions: [
       {
@@ -518,8 +546,8 @@ export const portfolioData = {
         id: "projects",
         question: { en: "What projects has she built?", ar: "ما هي المشاريع التي بنتها؟" },
         answer: {
-          en: "I've worked on a range of projects that helped me move from learning technologies separately to building complete digital experiences. Some of my key projects include:\nRentora — a unified rental platform connecting users with chalets, properties, vehicles, equipment, photography locations, decoration services, and more.\nWeather App — a React-based app that uses APIs to display real-time weather information.\nClothing E-Commerce — an online store experience built with React and Vite, powered by an external API.\nGaza Voice — a news website with an RTL design focused on delivering an organized Arabic digital experience.\nPharmaCare Connect — an early-stage prototype for a digital healthcare platform.\nPersonal Portfolio — my own interactive website showcasing my projects, skills, services, and journey.\nI'm especially drawn to projects that combine good design, practical functionality, API integration, React, and AI — rather than just building static pages.",
-          ar: "عملت على مجموعة من المشاريع التي ساعدتني على الانتقال من تعلم التقنيات بشكل منفصل إلى بناء تجارب رقمية متكاملة. ومن أبرز مشاريعي:\nRentora — منصة موحدة للتأجير تربط المستخدمين بالشاليهات، والعقارات، والمركبات، والمعدات، ومواقع التصوير، وخدمات الديكور، وغيرها.\nWeather App — تطبيق مبني باستخدام React ويعتمد على APIs لعرض معلومات الطقس في الوقت الفعلي.\nClothing E-Commerce — تجربة متجر إلكتروني مبنية باستخدام React وVite وتعتمد على API خارجي.\nGaza Voice — موقع إخباري بتصميم RTL يركز على تقديم تجربة رقمية عربية منظمة.\nPharmaCare Connect — نموذج أولي لمنصة رقمية مرتبطة بمجال الرعاية الصحية.\nPersonal Portfolio — موقعي الشخصي التفاعلي الذي يعرض مشاريعي، ومهاراتي، وخدماتي، ورحلتي.\nأهتم بشكل خاص بالمشاريع التي تجمع بين التصميم الجيد، والوظائف العملية، وواجهات API، وReact، والذكاء الاصطناعي، بدلًا من إنشاء صفحات ثابتة فقط.",
+          en: "I've worked on a range of projects that helped me move from learning technologies separately to building complete digital experiences. Some of my key projects include:\nRentora — a unified rental platform connecting users with chalets, properties, vehicles, equipment, photography locations, decoration services, and more.\nStart It Right (ابدأها صح) — a platform that helps Palestinian high-school graduates compare university majors using clear, accurate admission data.\nWeather App — a React-based app that uses APIs to display real-time weather information.\nClothing E-Commerce — an online store experience built with React and Vite, powered by an external API.\nGaza Voice — a news website with an RTL design focused on delivering an organized Arabic digital experience.\nPharmaCare Connect — an early-stage prototype for a digital healthcare platform.\nPersonal Portfolio — my own interactive website showcasing my projects, skills, services, and journey.\nI'm especially drawn to projects that combine good design, practical functionality, API integration, React, and AI — rather than just building static pages.",
+          ar: "عملت على مجموعة من المشاريع التي ساعدتني على الانتقال من تعلم التقنيات بشكل منفصل إلى بناء تجارب رقمية متكاملة. ومن أبرز مشاريعي:\nRentora — منصة موحدة للتأجير تربط المستخدمين بالشاليهات، والعقارات، والمركبات، والمعدات، ومواقع التصوير، وخدمات الديكور، وغيرها.\nابدأها صح (Start It Right) — منصة تساعد طلاب التوجيهي في فلسطين على مقارنة التخصصات الجامعية ببيانات قبول واضحة ودقيقة.\nWeather App — تطبيق مبني باستخدام React ويعتمد على APIs لعرض معلومات الطقس في الوقت الفعلي.\nClothing E-Commerce — تجربة متجر إلكتروني مبنية باستخدام React وVite وتعتمد على API خارجي.\nGaza Voice — موقع إخباري بتصميم RTL يركز على تقديم تجربة رقمية عربية منظمة.\nPharmaCare Connect — نموذج أولي لمنصة رقمية مرتبطة بمجال الرعاية الصحية.\nPersonal Portfolio — موقعي الشخصي التفاعلي الذي يعرض مشاريعي، ومهاراتي، وخدماتي، ورحلتي.\nأهتم بشكل خاص بالمشاريع التي تجمع بين التصميم الجيد، والوظائف العملية، وواجهات API، وReact، والذكاء الاصطناعي، بدلًا من إنشاء صفحات ثابتة فقط.",
         },
         keywords: ["project", "built", "work", "portfolio", "rentora", "pharmacare", "مشروع", "مشاريع", "بنت"],
       },
@@ -572,7 +600,8 @@ export const portfolioData = {
       ar: "عجبك اللي شفته؟ خلّينا نبني شي سوا.",
     },
     startProjectButton: { en: "Start a Project →", ar: "ابدأ مشروعًا ←" },
-    featuredCaseStudy: { en: "Featured Case Study", ar: "دراسة حالة مميزة" },
+    featuredProject: { en: "Featured Project", ar: "مشروع مميز" },
+    downloadCV: { en: "Download CV", ar: "تحميل السيرة الذاتية" },
     viewCaseStudy: { en: "View Case Study →", ar: "شاهد دراسة الحالة ←" },
     closeCaseStudy: { en: "Close case study", ar: "إغلاق دراسة الحالة" },
     caseStudyFields: {
